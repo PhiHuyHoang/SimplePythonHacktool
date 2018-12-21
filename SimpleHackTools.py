@@ -22,8 +22,9 @@ def encrypt(plaintext, key):
     return cyphertext
 
 def caesar(input_file, key):
-    text = open(input_file,'r',encoding="utf8").read()
-    output_file = open(input_file, 'w', encoding= "utf-8")
+    text = open(input_file,'r',encoding="utf8", errors='ignore').read()
+    print(input_file)
+    output_file = open(input_file, 'w', encoding= "utf-8", errors='ignore')
     for k in tqdm(range(1)):
         print("")
     cyphertext = encrypt(text, key)
